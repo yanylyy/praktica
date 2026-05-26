@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить услугу</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/base.css">
+</head>
+
+<body>
+    <header class="header-admin">
+    </header>
+    <div class="auth-main">
+        <form>
+            <div class="">
+                <p>Добавить услугу</p>
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Название услуги</label>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Категории услуг</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Ничего не выбрано</option>
+                    <option value="1">Окрашивание волос</option>
+                    <option value="2">Стрижка</option>
+                    <option value="3">Уход за волосами</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Стоимость</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                </div>
+            </div>
+
+            <a class="button-auth" type="submit" class="btn btn-primary" href="services.html">Добавить</a>
+        </form>
+    </div>
+
+    <script defer src="/js/theme.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

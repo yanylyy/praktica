@@ -1,0 +1,213 @@
+.content-admin {
+    flex: 1;
+    padding: 30px;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+.card {
+    background-color: #938ea8;
+    height: 140px;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-body {
+    padding: 40px 0 10px;
+}
+
+.card-title {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.card-subtitle {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.table-wrapper {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.table-title {
+    font-size: 18px;
+    color: #464646;
+    margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.table th {
+    background-color: #938ea8;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.table td {
+    color: #464646;
+}
+
+.action-icons i {
+    font-size: 18px;
+    margin-right: 12px;
+    cursor: pointer;
+    color: #938ea8;
+    transition: color 0.2s;
+}
+
+.action-icons i:hover {
+    color: #464646;
+}
+
+.btn-secondary {
+    background-color: #938ea8;
+    border-color: #938ea8;
+}
+
+.btn-secondary:hover {
+    background-color: #7a7590;
+    border-color: #7a7590;
+}
+
+
+@media (max-width: 768px) {
+    .content-admin {
+        padding: 15px;
+    }
+
+    .card-subtitle {
+        font-size: 18px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    .table-title {
+        font-size: 16px;
+    }
+
+    .table th,
+    .table td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}
+
+.burger-btn {
+    position: fixed;
+    top: 4px;
+    left: 15px;
+    z-index: 2055;
+
+    font-size: 32px;
+    border: none;
+    color: #938ea8;
+
+    display: none;
+}
+
+.offcanvas {
+    width: 260px !important;
+}
+
+.offcanvas-body .nav-link {
+    color: #464646;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.offcanvas-body .nav-link.active {
+    color: #938ea8;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #938ea8;
+    border-color: #938ea8;
+}
+
+.btn-primary:hover {
+    background-color: #7a7590;
+    border-color: #7a7590;
+}
+
+@media (max-width: 376px) {
+
+    .navv {
+        display: none;
+    }
+
+    .main-admin {
+        flex-direction: column;
+    }
+
+    .header-admin {
+        padding: 15px;
+        display: flex;
+        justify-content: start;
+    }
+
+    .img-admin {
+        width: 45px;
+        height: 45px;
+    }
+
+    .content-admin {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card {
+        height: auto;
+        padding: 15px 10px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    .table {
+        min-width: 700px;
+    }
+
+    .card-body {
+        padding: 10px 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .burger-btn {
+        display: block;
+    }
+
+    .navv {
+        display: none;
+    }
+
+    .header-admin {
+        justify-content: flex-end;
+        padding: 15px;
+    }
+
+}
