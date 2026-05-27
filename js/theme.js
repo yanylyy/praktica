@@ -1,40 +1,41 @@
-$(document).ready(() => {
+$(() => {
     const SCHEMA_LIGHT = 'light';
     const SCHEMA_DARK = 'dark';
-    // Используем относительный путь вместо абсолютного
     const pathCss = 'css';
     let currentSchema;
 
-    const getSchema = () => localStorage.getItem('schema');
+    const getSchema = () => currentSchema = localStorage.getItem('schema');
     const setSchema = (schema) => localStorage.setItem('schema', schema);
 
     const getFileSchema = () => `${currentSchema}-theme.css`;
 
     const loadCss = (file) => {
         if (file) {
-            // Удаляем существующий link с темой
-            $('link#theme-css').remove();
+            $("#theme-css").remove();
             $('<link>')
                 .attr({
-                    id: "theme-css",
+                    id: "#theme-css",
                     rel: "stylesheet",
                     href: `${pathCss}/${file}?t=${Date.now()}`
                 })
-                .appendTo('head');
+                .appendTo('head')
         }
+
     }
 
     $('.toggle').on('click', () => {
-        currentSchema = currentSchema === SCHEMA_LIGHT ? SCHEMA_DARK : SCHEMA_LIGHT;
-        setSchema(currentSchema);
-        loadCss(getFileSchema());
+        currentSchema = currentSchema === SCHEMA_LIGHT ? SCHEMA_DARK : SCHEMA_LIGHT
+        setSchema(currentSchema)
+        loadCss(getFileSchema())
     });
 
-    // Инициализация
-    currentSchema = getSchema();
-    if (!currentSchema) {
-        currentSchema = SCHEMA_LIGHT;
-        setSchema(currentSchema);
-    }
-    loadCss(getFileSchema());
-});
+    (() => {
+        currentSchema = getSchema();
+        if (!currentSchema) {
+            currentSchema = SCHEMA_LIGHT;
+            setSchema(currentSchema);
+        }
+        loadCss
+            (getFileSchema());
+    })()
+})
