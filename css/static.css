@@ -90,9 +90,6 @@
 
 
 @media (max-width: 768px) {
-    .content-admin {
-        padding: 15px;
-    }
 
     .card-subtitle {
         font-size: 18px;
