@@ -1,7 +1,8 @@
 $(document).ready(() => {
     const SCHEMA_LIGHT = 'light';
     const SCHEMA_DARK = 'dark';
-    const pathCss = '/css';
+    // Используем относительный путь вместо абсолютного
+    const pathCss = 'css';
     let currentSchema;
 
     const getSchema = () => localStorage.getItem('schema');
@@ -11,11 +12,11 @@ $(document).ready(() => {
 
     const loadCss = (file) => {
         if (file) {
-            // Правильный селектор без #
-            $("#theme-css").remove();
+            // Удаляем существующий link с темой
+            $('link#theme-css').remove();
             $('<link>')
                 .attr({
-                    id: "theme-css",  // Без # !
+                    id: "theme-css",
                     rel: "stylesheet",
                     href: `${pathCss}/${file}?t=${Date.now()}`
                 })
