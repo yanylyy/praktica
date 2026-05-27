@@ -19,7 +19,7 @@
 }
 
 .card-body {
-    padding: 50px 0 20px;
+    padding: 42px 0 10px;
 }
 
 .card-title {
@@ -193,6 +193,9 @@
 }
 
 @media (max-width: 768px) {
+    .card-body {
+        padding: 50px 0 20px;
+    }
 
     .burger-btn {
         display: block;
